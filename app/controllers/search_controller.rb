@@ -1,5 +1,8 @@
 class SearchController < ApplicationController
-  def text
+ # @send_variable = nil
+
+  def show
+    @send_variable = params[:q]
   end
   
   def index

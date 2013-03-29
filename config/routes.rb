@@ -2,6 +2,7 @@ RubyBlog::Application.routes.draw do
 
   get "search/text"
   get "search/index"
+  post "search/show"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

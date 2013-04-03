@@ -1,5 +1,7 @@
 RubyBlog::Application.routes.draw do
 
+  resources :watchticks
+
   get "search/text"
   get "search/index"
   post "search/show"
@@ -53,7 +55,8 @@ RubyBlog::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'search#index'
+   root :to => 'search#index'
+  #  root :to => 'watchticks#index'
 
   # See how all your routes lay out with "rake routes"
 

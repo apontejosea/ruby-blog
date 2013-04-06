@@ -1,0 +1,23 @@
+<h1>Listing watchticks</h1>
+
+<table>
+  <tr>
+    <th>Tick</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @watchticks.each do |watchtick| %>
+  <tr>
+    <td><%= [watchtick.tick, watchtick.closing_price].join(' ') %></td>
+    <td><%= link_to 'Show', watchtick %></td>
+    <td><%= link_to 'Edit', edit_watchtick_path(watchtick) %></td>
+    <td><%= link_to 'Destroy', watchtick, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Watchtick', new_watchtick_path %>
